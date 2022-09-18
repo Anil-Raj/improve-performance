@@ -1,0 +1,29 @@
+General	Node	React/Frameworks	PWA			
+Awareness of browser engine vs javascript engine (BOM, DOM, event loops...)	Advantages of CSR vs SSR		PWA and features			
+Css Basics (selectors, priority, box model, positioning, responsive designs...)	Multithreading, event loop	VDOM, Diff	Other browsers?			
+Favorite HTML5 features and about semantics	HTTP basics, caching		manifests, notifications			
+Basics and Everyday javascript (rAF, promises, events, prototypes, closures, constructors, currying, binding....	What do you measure? (for cpu, memory, disk and netowrk)	Controlled vs uncontrolled	offline features, servcie workers			
+Favorite es6 features	What problems you came across and how did you solve it?	context api required?	caching			
+Favorite Perf metrics and performance awareness ( perf quirks for page render, animations, layout trashing, GPU exploits, prefetch preload, http caching ) and what do you measure?	clustering in node js	life cycles, shouldCOmponent update				
+Basics of HTTP (methods, caching..)	About process, threads	RN vs web, how css works, how js executes				
+ 	Basics fo netowkring TCP...	Bridge and different types of threads				
+Advanced (web workers, sockets, Garbage collection, memory leaks, shadow dom, custom elements, RAIL)	Streaming, sockets, 	Presentational and dumb components				
+SEO, network real time collaboration techniques,	How HTTPS works	Unit testing				
+	Secuirty measure, Load balancers, nginx..	forceUpdate?				
+Testing	Npm					
+Polyfills backward compactability, progresive enhancements	Dependency management					
+	Cookies, sessions					
+						
+	Bundling, CI, GIT,  E2E knowledge					
+						
+						
+						
+DOM	CSS Knowledge	Timers and events	JS proficiency 	UI Problem	Application / Network	Async programming
+Event bubbling	Box model	Event loop	Patterns (Singleton/ Pubsub)	Autosuggest	Gzip	Promises
+Node heirarchy 	Positioning context	RequestAnimationFrame v/s SetInterval	Closures 	Infinite scroll	etags + CDN	Promise.all
+Differnce between Element, HTML Element and Node			Flux	Lazy loading	async/ defer	
+ArrayLike (Nodelist traversal)			Redux	Excel sheet	preload vs prefetch	
+DocumentFragments (LiveNodes and Static nodes)					HTTPS + encryption	
+					XSS	
+					CORS 	
+					CSP	
