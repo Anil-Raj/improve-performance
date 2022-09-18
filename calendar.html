@@ -1,0 +1,59 @@
+
+Calendar interview question
+The original idea spawned during discussions around what would be a good small question to test all three fundamental web skills: JavaScript, HTML and CSS. Implementing a full calendar in 2hrs of time is difficult. But the idea can be used to slice off the full implementation into smaller chunks for targeted tests:
+
+Just UI using HTML, CSS and a bit of JS if required
+Basic templated UI with focus on event additions and deletions
+Basic templated UI with focus on animations/transitions between (say) year -> month etc., like MacOS or iOS Calendar.app
+etc.
+
+For a test I tried to build a basic calendar by generating all the dates and names myself and displaying them in a grid. This took more than 2hrs, so during a recent interview for machine coding, I changed the question to build just a month's view similar to Google Calendar. Even this, considering the candidate had to first generate the dates and random events, was not feasible in a 2-3hr window. To help with the process, I ended up writing a random event generator that'd output JSON.
+
+This repo contains a very naive generator for events with the following slices:
+
+All day events
+Recurring events
+Acceptance state
+Randomized meetings per day with random people.
+Sample is in example/events.json
+
+Question Variations
+UI oriented, fundamental set
+(All using sample events.json, use Google calendar or Apple calendar for reference)
+
+You won't be judged on you colour choices or general neatness of the UI, so no need to spend too much time deciding colours. Some logical separation of the contents, even if they're completely black-and-white is fine. You will, however, be judged on code-organisation, naming.
+
+Build a month's view of a calendar
+
+Pick a month other than Jan / Dec.
+The month's view should show the overflow days from previous month and next month if they're needed
+Use CSS as much as possible for styling
+Use JS only for interactions and rendering if you intend to use a lightweight framework / library. Try not to rely on too many modules to do this
+Use HTML for layout, preferring semantic layout without CSS or JS, as much as possible
+Events should be sorted by start time
+Overlap in events can be ignored. Show the start time, and list them one after the other
+Have colour-separation for full-day and limited-time events.
+Build a day's view of a calendar
+
+The day should have 30-min divisions with the events painted according to the times they start
+Use CSS as much as possible for styling
+Use JS only for interactions and rendering if you intend to use a lightweight framework / library. Try not to rely on too many modules to do this
+Use HTML for layout, preferring semantic layout without CSS or JS, as much as possible
+Event height should span the duration of the event
+Have colour-separation for full-day and limited-time events.
+Full-day events can show up in a separate container above the timeline
+UI oriented, advanced set
+For when the interviewee wants to use a library / framework for the UI, or perhaps a longer MC round for > UI-2 candidates
+
+Basics from 1 / 2 above, plus some of the following (interviewer needs to choose):
+
+Users should be able to click on an event, which will show more details around it (another page / modal are acceptable)
+Overlaps in events should be preserved in view, like in Google calendar
+Users should be able to add new events (use in-memory or localstorage)
+Full-stack / Node oriented
+Basics from 1 / 2 above, plus one the following (interviewer needs to choose):
+
+Create an API backend to consume the given JSON. You'll have to encapsulate the JSON and not send the entire blob down to the UI; choose what the UI needs and build the API around it
+If you are implementing click-to-view-event flow, the API should support that extra data (and not send it in just one call while rendering the month / day view)
+If you're implementing the addition of new events, that data should be persisted (in-memory or file system are acceptable) over page refreshes
+If you're using a framework, and it supports server side rendering + client side hydration, do that.
