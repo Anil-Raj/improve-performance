@@ -1,1 +1,47 @@
 
+
+
+Book Exchange Site
+
+
+MUST HAVES:
+
+Design a simple book exchange site as shown below.
+
+
+
+
+
+2. The site consists of a table of books with 6 Columns - Id, Title, Author, Lender, Borrower, and Action. Buttons in the Action column will be enabled only once a user logs-in, and will change depending on who the logged-in user is. Pre-populate the library by default with a few books. This view should be visible with action buttons disabled when no user is logged-in. 
+
+3. Once you login as a particular user (by simply typing in username in the input field in the header), following actions will be enabled - 
+Add book - Add a book by clicking on the ‘Add book’ button. Other users will see a Borrow button to borrow the book.
+Borrow - You can borrow books that nobody else has borrowed or requested yet. Also, no borrow button will be available for books that you’re the lender of. When you click on Borrow, you will be prompted to enter the time (in seconds) for which you want to borrow the book. At the end of this period the book will be automatically returned, unless you manually return it before the expiry period.
+Return - Clicking on this button will return a borrowed book.  
+Request Next - For books that somebody else has already borrowed, a Request Next button will be displayed. If the logged-in user UserA clicks on this button and requests for Book1 that is currently borrowed by UserB, then UserA and everyone else (when they log-in) will see ‘Requested by UserA’ in the Action column for the Book1 row (except for UserB, who will see a Return button). Once Book1 is returned, UserA will now see a Borrow button. Everyone else will continue to see ‘Requested by UserA’ until either UserA clicks on the Borrow button to borrow it, or a duration of 10 seconds expires, after which UserA’s request is invalidated (if UserA’s request gets invalidated, everyone, including UserA, will now have the option to borrow Book1).
+
+
+4.  The last row of the table allows adding a new book. The Lender value will be preloaded with the logged-in user’s name.
+
+
+
+GOOD TO HAVES:
+
+Allow sorting/searching books by title.
+Allow deleting books you have already added. 
+Provide an option to forcibly retrieve your books borrowed by a user.
+
+
+Note :
+
+Please refrain from using any plugins/libraries like jQuery/React/Angular.
+Use only plain JS and proper CSS.
+Implementation should be functional and without errors. Please test it before submission.
+You will be marked on the UI design and implementation, both.
+Don't pollute the global namespace
+Do use JS patterns
+Write modular code
+Handle corner cases
+Follow performance best practices (ignore minifying and combining files)
+Bonus marks for ES6 usage or cross browser compatibility
+
