@@ -1,0 +1,48 @@
+Problem Statement
+Build a UI for creating and configuring Creatives. A Creative is a container / box that contains a title and a subtitle, with a background color.
+
+Sample UI
+Mocks.pdf
+Font used in mocks: https://fonts.google.com/specimen/Nunito (Regular and Bold)
+API Sources
+List of background colors: https://random-flat-colors.vercel.app/api/random?count=5
+Product Features
+Creative Dashboard
+The dashboard loads with an empty list of Creatives. A progress bar indicates how many Creatives have been created so far. A maximum total of five Creatives are allowed. 
+An “Add Creative” button can be used by the User to open the Creative Creation Drawer (details below).  When the drawer is closed, the dashboard should take 100% width.
+The UI also provides a means to filter the list of Creatives via color and text. 
+Users should be able to multi-select colors
+List can be filtered using color and text (partial and case insensitive) simultaneously.
+Creative Creation Drawer
+Clicking on the “Add Creative” button changes the layout of the page by opening a drawer. The following are some styling rules when the drawer is open:
+The drawer takes up 35% of the screen width and transitions in.
+The “Add Creative”  button is disabled when the drawer is open.
+
+
+A form needs to be made available in the drawer. A user can enter the Title and Subtitle for a Creative, and select a background color. The list of background colors needs to be fetched via the provided API. The following are some rules about the form:
+All three fields are required fields. It is mandatory for the user to fill them.
+The Done button on the form is disabled until all the form fields are entered by the user.
+
+
+On clicking on Done, the drawer automatically closes. The Creatives Dashboard updates with the following:
+The Add Creative button is enabled as the drawer is closed.
+The Progress bar shows the number of Creatives created, both numerically, ie (1/5), and visually via a progress meter that transitions to show progress.
+The newly created Creative is rendered as a Preview on the list. A Preview should be a rectangle whose background color is what the user selected in the form, with the title and subtitle information entered by the user  inside it.
+
+
+The drawer can also be closed by clicking on a “X” (close) button or the esc key.
+
+Must Haves:
+The list of background colors must be fetched from the API.
+The UI should be as close to the mocks provided.
+Filtering Creatives based on color and title / subtitle text.
+Points to consider:
+The solution should be coded in vanilla JavaScript and CSS. Please refrain from using any plugins / libraries like  jQuery / React / Angular or css frameworks like Bootstrap. However, you can use tooling such as webpack, grunt, gulp, etc.
+Focus on the modularity of code and design of the solution. Keep the performance of the application in mind.
+The final solution should work without errors.
+Ensure the solution’s look and feel matches the mocks as much as possible.
+Focus on using the right semantic html tags. Using the right HTML tag may be faster than building your own implementation!
+You will be evaluated based on: 
+Correctness and completeness of the solution, and understanding of the problem statement.
+Code design and quality.
+Visual aesthetics and your ability to extract styling and UX information from a mock. (the UI should be as close as possible to the given design)
