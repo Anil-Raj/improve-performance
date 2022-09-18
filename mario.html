@@ -1,0 +1,62 @@
+
+Assignment
+
+Problem Statement
+Mario is very hungry and wants to eat mushrooms but they are randomly hidden in a grid of
+NxN where N is number of columns & rows. Mario will always start its hunt
+for mushrooms from 0th cell,i.e (0,0). At the same time some grid will have poison which will kill the mario.
+
+To help Mario move you have to use the arrow keys to
+reach a particular mushroom. Mario tummy will be filled only after he has eaten all the
+mushrooms in the grid. Make sure to avoid the poison grids during the hunt to keep winning. 
+
+Video explanation - https://www.youtube.com/watch?v=gpGMtOvsMeY
+
+LIST OF REQUIREMENTS:
+To start the game press any arrow key.
+Mario will start  to move in the direction of the arrow key pressed and will reverse its direction once it has reached the grid end points .EG - in a 10*10 grid, When mario is in 0*0 ,On press of  keyboard Right key- mario starts moving in the Right side direction until it reaches 0*10 then automatically it changes its direction to Left until it reaches 0*0 and bounces back in reverse direction again in a loop until some other direction key ( Up or Down ) is pressed.
+Mario’s speed starts with a speed of 1000ms for 1 grid movement. Increase the speed of the mario’s movement for every mushroom it eats by 100ms.
+At a time there can be N number of poisons placed randomly on a N*N Grid, ( Which will be hidden after 3 seconds, user should remember the position of poisons & not take those routes )
+Poison should not be placed very close to the moving direction of the mario. Eg-  If mario is in 0*1 moving in the right side direction poison should not be placed at 0*2 , should at least maintain 2 grid gap. 
+At a time one mushroom will appear on a non poison grid.Mario has to be moved to eat this mushroom and gain points.
+Every time a mushroom is eaten, a new mushroom is placed randomly on a non poison grid and the poisons’ position is changed randomly, keeping the condition of point number 5.
+Add Pause and resume button. Pause should pause the mario’s movement. 
+Game should continue from the same state even on page refresh
+
+Good to have:
+      10. Use observer pattern for decoupling view and state
+
+TECH STACK :
+
+Please don’t use any javascript frameworks like react / angular / vue , as we wanted to evaluate your code quality based on design patterns / reusability /  Extensibility / maintainability
+
+Sample asset - 
+Mario - http://icons.iconarchive.com/icons/ph03nyx/super-mario/64/Paper-Mario-icon.png
+Mushroom - https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Novosel_mushroom.svg/64px-Novosel_mushroom.svg.png
+Poison - http://pm1.narvii.com/6508/2cab51768eafc444e372b827797b2e00cb9d8ab2_hq.jpg
+
+
+
+Evaluation criteria:
+
+We understand the complexity of the problem & completing the problem will have a huge weightage in the entire interview process. Following are the evaluation criteria 
+
+1. Usage of design patterns in a meaningful way [ Please add it in comment wherever you feel you wanted to explain some design philosophy that is helping solve this problem ] - 10% weightage
+
+2. Code extensibility / Reusability / Maintainability - 20% weightage - eg 
+ -  Don't use global variable
+ -  Can this game be improvised to a multiplayer scenario with 2 mario chasing the same food easily ? 
+ -  Is there a piece of code which can be reused tomorrow for  another feature easily without refactoring much , [ it can be as simple as having a Util fn ] , Let us know by adding a comment in the code where you feel things can be reused in future & how easy it is. 
+
+3.  High level problem solving approach taken to solve the given problem 10% weightage
+
+4. Separation of concerns - 10% weightage
+
+5. Completion of requirement [ 1 - 7 ]  - 20% weightage
+
+6. Completion of requirement [ 8  ] - 5% weightage
+
+7. Completion of requirement [ 9  ] - 15% weightage
+
+8. Good to have [  point - 10  ]  - 10% weightage
+
